@@ -1,0 +1,13 @@
+
+
+# Forum technique pour les spécialités d'informatique et de transmission
+
+1- Question 
+
+2- Reponse
+
+3- Utilisateurs
+  A- une question est créée par un Utilisateur
+  B- une reponse appartient à une question et à un Utilisateur
+
+4
