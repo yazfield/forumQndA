@@ -22,13 +22,24 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
+$factory->define(App\Category::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        
+    ];
+});
+
 $factory->define(App\Question::class, function (Faker $faker) {
     return [
         'user_id' => function () {
-            return factory(App\User::class)->create()->id;
+            return factory(App\User::class)->create()->id;;
+        },
+        'category_id' => function () {
+            return random_int(1, 2);
         },
         'title' => $faker->sentence,
         'body' => $faker->paragraph,
+        'resolved' => 0,
     ];
 });
 
