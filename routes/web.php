@@ -22,11 +22,15 @@ Route::get('/questions', 'QuestionsController@index');
 
 Route::post('/questions', 'QuestionsController@store');
 
+Route::get('/questions/create', 'QuestionsController@create');
+
 Route::get('/questions/{question}', 'QuestionsController@show');
 
 Route::post('/questions/{question}/replies', 'RepliesController@store');
 
 Route::put('questions/{question}/replies/{reply}/validate', 'QuestionsController@validateReply'); 
+
+Route::get('/questions/{question}', 'QuestionsController@show');
 
 Auth::routes();
 
